@@ -22,7 +22,7 @@ const NewStudent = () => {
     vSurname: "",
     vMobile: "",
     vEmail: "",
-    user:user.username
+    user:user.username ? user.username : null
   });
   const [error,setError] = useState('')
 
