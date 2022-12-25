@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import students from "../../public/image.jpg"
 
-const login = () => {
+const Login = () => {
   const [ username, setUsername ] = useState('')
     const [ password, setPassword ] = useState('')
     const [ error, setError ] = useState(null)
@@ -119,4 +119,4 @@ const login = () => {
 //   return { props: { data } }
 // }
 
-export default login;
+export default Login;

@@ -6,7 +6,7 @@ import { AuthContext } from '../../../context/authContext'
 import { useContext,useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-const admin = () => {
+const Admin = () => {
   const { dispatch, user } = useContext(AuthContext)
   
 
@@ -40,4 +40,4 @@ const admin = () => {
   
 }
 
-export default admin
+export default Admin
