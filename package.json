@@ -1,6 +1,5 @@
 {
-  "name": "student-system",
-  "proxy":"https://srs-seven.vercel.app",
+  "name": "student-system",  
   "version": "0.1.0",
   "private": true,
   "scripts": {

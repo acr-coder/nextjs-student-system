@@ -15,7 +15,7 @@ const UserProfile = () => {
   useEffect(() => {
     const getData = async () => {
       if(id){
-        const res = await fetch(`/api/auth/admin/${id}`, {
+        const res = await fetch(`https://srs-seven.vercel.app/api/auth/admin/${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

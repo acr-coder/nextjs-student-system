@@ -51,7 +51,7 @@ const NewStudent = () => {
       
     } else {
       try {
-        fetch("/api/students", {
+        fetch("https://srs-seven.vercel.app/api/students", {
           method: "POST",
           body: JSON.stringify(newStudent),
           headers: {
