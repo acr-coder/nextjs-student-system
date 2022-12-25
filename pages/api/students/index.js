@@ -18,9 +18,10 @@ export default async function handler (req, res) {
             break;
         case 'POST':
             try {
-                const student = await Student.create(req.body);
+                //const student = await Student.create(req.body);
+                const students = await Student.insertMany(req.body)
                 console.log("post çalıştı");
-                res.status(201).json({ success: true, data: student })
+                res.status(201).json({ success: true, data: students })
             } catch (error) {
                 res.status(400).json({ success: false, data:error });
                 console.log(error);
@@ -28,8 +29,8 @@ export default async function handler (req, res) {
             break;
         case 'DELETE':
             try {
-                const student = await Student.findByIdAndDelete(req.body.id);
-                //const student = await Student.deleteMany({_id: { $in: req.body.objects}});
+                //const student = await Student.findByIdAndDelete(req.body.id);
+                const student = await Student.deleteMany({_id: { $in: req.body.objects}});
                 res.status(201).json({ success: true, data: student })
             } catch (error) {
                 res.status(400).json({ success: false });

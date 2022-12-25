@@ -1,7 +1,7 @@
-import User from "../../../models/userModel";
+import User from "../../../../models/userModel";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import dbConnect from "../../../config/db";
+import dbConnect from "../../../../config/db";
 
 dbConnect();
 
@@ -11,6 +11,7 @@ const generateToken = (_id) => {
 
 export default async function handler(req, res) {
   const { method } = req;
+  const { id } = req.query;
 
   switch (method) {
     case "GET":
@@ -32,9 +33,9 @@ export default async function handler(req, res) {
           const admin = await User.findById(decoded._id).select("-password");
           
           if (admin.isAdmin) {
-            const allusers = await User.find({}).select("-password");
+            const user = await User.findById(id).select("-password");
 
-            res.status(200).json({ success: true, data: allusers });
+            res.status(200).json({ success: true, data: user });
           }else{
             res.status(401).json({ message:"Not authorized" });
          
@@ -72,9 +73,9 @@ export default async function handler(req, res) {
             const admin = await User.findById(decoded._id).select("-password");
             
             if (admin.isAdmin) {
-              const deletedUser = await User.findByIdAndDelete(req.body.id)
+              const deletedUsers = await User.deleteMany({_id: { $in: req.body.objects}});
   
-              res.status(200).json({ success: true, data: deletedUser });
+              res.status(200).json({ success: true, data: deletedUsers });
             }else{
               res.status(401).json({ message:"Not authorized" });
            

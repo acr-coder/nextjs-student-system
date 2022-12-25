@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const NewUser = () => {
   const [username, setUsername] = useState("");
@@ -6,6 +8,8 @@ const NewUser = () => {
   const [password, setPassword] = useState("");
   const [isAdmin, setIsAdmin] = useState(false);
   const [error, setError] = useState(null);
+
+  const notify = (msg) => toast.success(msg);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,6 +32,7 @@ const NewUser = () => {
         isAdmin: isAdmin,
       }),
     });
+
     //Await for data for any desirable next steps
     const data = await res.json();
 
@@ -36,7 +41,7 @@ const NewUser = () => {
     if (!res.ok) {
       setError(data.error);
     }
-    alert(`${fullname} isimli kullanıcı eklendi`)
+    notify(`${fullname} isimli kullanıcı eklendi`)
 
     setUsername("")
     setFullName("")
@@ -45,6 +50,7 @@ const NewUser = () => {
   };
   return (
     <div className="d-flex justify-content-center align-items-center bg-warning rounded">
+      <ToastContainer autoClose={3000} theme="colored" />
       <form onSubmit={handleSubmit} className="signup-form w-75">
         <div className="mb-3 text-center">
           <label className="form-label fs-1 text-white">Add New User</label>

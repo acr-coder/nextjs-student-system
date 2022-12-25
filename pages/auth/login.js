@@ -2,6 +2,8 @@ import React, { useState, useEffect} from "react";
 import { AuthContext } from "../../context/authContext";
 import { useContext } from "react";
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+import students from "../../public/image.jpg"
 
 const login = () => {
   const [ username, setUsername ] = useState('')
@@ -50,13 +52,17 @@ const login = () => {
     )
    } else if(!user){
      return (
-    <div className="ala vh-100 vw-100 d-flex justify-content-center align-items-center bg-primary">
-      <form onSubmit={handleSubmit} className="login-form w-75">
+    <div className="ala vh-100 vw-100 d-flex justify-content-center align-items-center bg-primary ">
+     
+     
+      
+      
+      <form onSubmit={handleSubmit} className="login-form w-75 ">
         <div className="mb-3 text-center">
-          <label className="form-label fs-1 text-white">Login</label>
+          <label className="form-label fs-1  text-white rounded p-1">Login</label>
         </div>
         <div className="mb-3">
-          <label  className="form-label text-white">
+          <label  className="form-label  text-white rounded p-1">
             Username
           </label>
           <input
@@ -69,7 +75,7 @@ const login = () => {
           />
         </div>
         <div className="mb-3 ">
-          <label  className="form-label text-white">
+          <label  className="form-label  text-white rounded p-1">
             Password
           </label>
           <input

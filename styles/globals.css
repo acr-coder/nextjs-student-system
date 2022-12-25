@@ -4,6 +4,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Nunito', sans-serif;
+  background-color: #6c757d;
 }
 
 a {
@@ -14,6 +15,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
 
 @media (min-width: 560px) { 
   .login-form{
@@ -31,5 +33,32 @@ a {
     background: black;
   }
 }
+.login_page_bg{
+  z-index: 0;
+}
+.login-form{
+  z-index: 1;
+}
+.home-image{
+  background: url('../public/image.jpg');
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+.my-icon:hover{
+  
+  
+  cursor: pointer;
+}
+
+.row-divider{
+  width: 100%;
+  height: 4px;
+  background-color: #0d6efd;
+}
+
+
+
 
 

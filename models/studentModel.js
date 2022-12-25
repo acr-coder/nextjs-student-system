@@ -42,6 +42,11 @@ var student = new Schema({
   sClass:{
     type:String
   },
+  user: {
+    type: String,
+    required: true
+}
+  
   
 },{timestamps:true});
 
