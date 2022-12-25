@@ -40,7 +40,7 @@ const StudentTable = () => {
 
   const handleDelete = () => {
     try {
-      fetch("http://localhost:3000/api/students", {
+      fetch("https://srs-seven.vercel.app/api/students", {
         method: "DELETE",
         body: JSON.stringify({ objects: selected }),
         headers: {
@@ -59,7 +59,7 @@ const StudentTable = () => {
    
     const getStudents = async () => {
        //setLoading(true);
-      const response = await fetch("http://localhost:3000/api/students");
+      const response = await fetch("https://srs-seven.vercel.app/api/students");
       const json = await response.json();
       setStudentList(json.data);
       //setLoading(false);

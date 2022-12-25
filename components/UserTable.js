@@ -26,7 +26,7 @@ const UserTable = () => {
 
     const handleDelete = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/auth/admin", {
+        const res = await fetch("https://srs-seven.vercel.app/api/auth/admin", {
           method: "DELETE",
           body: JSON.stringify({ objects: selected }),
           headers: {
@@ -48,7 +48,7 @@ const UserTable = () => {
 
     useEffect(()=> {
         const getData = async ()=> {
-        const res = await fetch(`http://localhost:3000/api/auth/admin`,{
+        const res = await fetch(`https://srs-seven.vercel.app/api/auth/admin`,{
             method:'GET',       
             headers: {
             'Content-Type':'application/json',

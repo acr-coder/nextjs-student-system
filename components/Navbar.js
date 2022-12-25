@@ -13,7 +13,7 @@ const Navbar = () => {
       e.preventDefault()
        // remove user from storage
        console.log(user._id);
-       const response = await fetch("http://localhost:3000/api/auth/logout", {
+       const response = await fetch("https://srs-seven.vercel.app/api/auth/logout", {
             method:'PUT',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(user._id)

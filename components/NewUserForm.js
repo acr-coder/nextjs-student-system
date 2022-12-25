@@ -20,7 +20,7 @@ const NewUser = () => {
       return;
     }
     //POST form values
-    const res = await fetch("/api/auth/signup", {
+    const res = await fetch("https://srs-seven.vercel.app/api/auth/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
