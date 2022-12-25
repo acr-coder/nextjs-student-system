@@ -180,7 +180,7 @@ const StudentTable = () => {
                       currentTableRef={tableRef.current}
                   >
   
-                     <button>Excell</button>
+                     <button className="btn btn-success" >Download Excell</button>
   
                   </DownloadTableExcel>
               )
