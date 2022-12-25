@@ -51,7 +51,7 @@ const NewStudent = () => {
       
     } else {
       try {
-        fetch("http://localhost:3000/api/students", {
+        fetch("/api/students", {
           method: "POST",
           body: JSON.stringify(newStudent),
           headers: {

@@ -25,7 +25,7 @@ const StudentEdit = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch(`http://localhost:3000/api/students/${id}`);
+      const res = await fetch(`/api/students/${id}`);
       const data = await res.json();
       //console.log(data.data);
       setNewStudent({
@@ -69,7 +69,7 @@ const StudentEdit = () => {
       
     } else {
       try {
-        fetch("http://localhost:3000/api/students/"+id, {
+        fetch("/api/students/"+id, {
           method: "PUT",
           body: JSON.stringify(newStudent),
           headers: {
