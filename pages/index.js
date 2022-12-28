@@ -8,14 +8,13 @@ import { useRouter } from "next/router";
 import StudentTable from "../components/StudentTable";
 
 export default function Home() {
-  
   const { dispatch, user } = useContext(AuthContext);
 
   const router = useRouter();
 
   useEffect(() => {
-    const userExists = localStorage.getItem('user')
-    
+    const userExists = localStorage.getItem("user");
+
     if (!userExists) {
       router.push("/auth/login");
     }
@@ -26,19 +25,12 @@ export default function Home() {
   }
   return (
     <>
-    <Head>
-      <title>SRS/Anasayfa</title>
-    </Head>
+      <Head>
+        <title>SRS/Anasayfa</title>
+      </Head>
       <Navbar />
-      
-        
-        
-          
 
-          <StudentTable />
-        
-        
-      
+      <StudentTable />
     </>
   );
 }

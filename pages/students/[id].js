@@ -99,64 +99,63 @@ const StudentEdit = () => {
     <ToastContainer autoClose={3000} theme="colored" />
       <Navbar />
       <div className="container rounded bg-white mt-5 p-5">
-        <div className="h3 text-center text-primary">Kayıt Güncelleme</div>
+        <div className="h3 text-center text-primary">Update Record</div>
 
         <form className="form" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-3 mt-md-1 mt-3">
-              <label>Adı</label>
+              <label>Name</label>
               <input type="text" value={newStudent.sName} onChange={handleChange} className="form-control" name="sName" required />
             </div>
             <div className="col-md-3 mt-md-1 mt-3">
-              <label>Soyadı</label>
+              <label>Lastname</label>
               <input type="text" value={newStudent.sSurname} onChange={handleChange} className="form-control" name="sSurname" required />
             </div>
             <div className="col-md-3 mt-md-1 mt-3">
-              <label>E-posta Adresi</label>
+              <label>Email</label>
               <input type="text" value={newStudent.sEmail} onChange={handleChange} className="form-control" name="sEmail" required />
             </div>
             <div className="col-md-3 mt-md-1 mt-3">
-              <label>Telefonu</label>
+              <label>Phone</label>
               <input type="text" value={newStudent.sMobile} onChange={handleChange} className="form-control" name="sMobile" required />
             </div>
           </div>
           <div className="row">
             
             <div className="col-md-3 mt-md-1 mt-3">
-            <label>Sınıfı</label>
+            <label>Class</label>
               <select className="form-select" value={newStudent.sClass} onChange={handleChange} name="sClass" aria-label="Default select example">
                
-                <option value="5">5.Sınıf</option>
-                <option value="6">6.Sınıf</option>
-                <option value="7">7.Sınıf</option>
-                <option value="8">8.Sınıf</option>
-                <option value="9">9.Sınıf</option>
-                <option value="10">10.Sınıf</option>
-                <option value="11">11.Sınıf</option>
-                <option value="12">12.Sınıf</option>
-                <option value="mezun">Mezun</option>
+              <option value="5">Class 5</option>
+                <option value="6">Class 6</option>
+                <option value="7">Class 7</option>
+                <option value="8">Class 8</option>
+                <option value="9">Class 9</option>
+                <option value="10">Class 10</option>
+                <option value="11">Class 11</option>
+                <option value="12">Class 12</option>
               </select>
             </div>
             <div className="col-md-3 mt-md-1 mt-3">
-              <label>Adresi</label>
+              <label>Address</label>
               <input type="textarea" value={newStudent.sAddress} onChange={handleChange} className="form-control" name="sAddress" required />
             </div>
           </div>
           <div className="row">
             <div className="col-md-3 mt-md-1 mt-3">
-              <label>Veli Adı</label>
+              <label>Parent Name</label>
               <input type="text" value={newStudent.vName} onChange={handleChange} className="form-control" name="vName" required />
             </div>
             <div className="col-md-3 mt-md-1 mt-3">
-              <label>Veli Soyadı</label>
+              <label>Parent Lastname</label>
               <input type="text" value={newStudent.vSurname} onChange={handleChange} className="form-control" name="vSurname" required />
             </div>
             <div className="col-md-3 mt-md-1 mt-3">
-              <label>Veli E-posta Adresi</label>
+              <label>Parent Email</label>
               <input type="text" value={newStudent.vEmail} onChange={handleChange} className="form-control" name="vEmail" required />
             </div>
             <div className="col-md-3 mt-md-1 mt-3">
-              <label>Veli Telefonu</label>
+              <label>Parent Phone</label>
               <input type="text" value={newStudent.vMobile} onChange={handleChange} className="form-control" name="vMobile" required />
             </div>
           </div>

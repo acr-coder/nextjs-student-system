@@ -120,13 +120,13 @@ const UserTable = () => {
           </div>
         </caption>
         <thead>
-    <tr>
+        <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Username</th>
-      <th scope="col">Hesap Oluşma Tarihi</th>
-      <th scope="col">Son Giriş</th>
-      <th scope="col">Son Çıkış</th>
+      <th scope="col">Account Date</th>
+      <th scope="col">Last Login</th>
+      <th scope="col">Last Logout</th>
     </tr>
   </thead>
   <tbody>
