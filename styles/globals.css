@@ -58,7 +58,9 @@ a {
   background-color: #0d6efd;
 }
 
-
+.not_show{
+  visibility: hidden;
+  }
 
 
 
